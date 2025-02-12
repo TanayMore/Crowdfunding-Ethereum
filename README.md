@@ -1,59 +1,32 @@
+Crowdfunding Smart Contract
 
-![tw-banner](https://github.com/thirdweb-example/next-starter/assets/57885104/20c8ce3b-4e55-4f10-ae03-2fe4743a5ee8)
+This is a smart contract for a Crowdfunding application implemented in Solidity. The contract allows users to participate in a crowdfunding campaign, with multiple tiers, funding options, and automatic handling of the campaign state (active, successful, or failed). The contract also includes an owner-only feature for managing the campaign's progress, adding/removing funding tiers, and handling withdrawals.
 
-# thirdweb-next-starter
+Overview
 
-Starter template to build an onchain react native app with [thirdweb](https://thirdweb.com/) and [next](https://nextjs.org/).
+This Crowdfunding smart contract allows for the creation and management of a crowdfunding campaign, with the following capabilities:
 
-## Installation
+    Multiple Tiers: Set different funding tiers with specific contribution amounts.
+    Campaign State: The campaign can be active, successful, or failed based on the goal and the deadline.
+    Backers: Contributors can fund specific tiers and track their contributions.
+    Refunds: If the campaign fails to reach the goal by the deadline, backers can receive refunds.
+    Owner Control: The owner has full control over the campaign, such as adding/removing tiers, withdrawing funds, and pausing the contract.
+    Pause Mechanism: The contract can be paused to temporarily disable operations.
 
-Install the template using [thirdweb create](https://portal.thirdweb.com/cli/create)
+Features
 
-```bash
-  npx thirdweb create app --next
-```
+    Multiple funding tiers: Organize funding into various tiers with specific contribution amounts.
+    Backer tracking: Each backer’s contribution and tier participation are tracked.
+    Campaign status: The campaign automatically updates its state (active, successful, or failed) based on contributions and deadline.
+    Owner privileges: The owner can add/remove funding tiers, withdraw funds after a successful campaign, and extend the campaign deadline.
+    Refund functionality: Backers can get refunds if the campaign fails.
+    Pause/Unpause: The contract can be paused to disable all operations temporarily.
 
-## Environment Variables
+Installation
 
-To run this project, you will need to add the following environment variables to your .env file:
+To interact with this contract, you will need a development environment that supports Solidity, such as Remix IDE, or a local environment using Truffle or Hardhat.
+Requirements
 
-`CLIENT_ID`
-
-To learn how to create a client ID, refer to the [client documentation](https://portal.thirdweb.com/typescript/v5/client). 
-
-## Run locally
-
-Install dependencies
-
-```bash
-yarn
-```
-
-Start development server
-
-```bash
-yarn dev
-```
-
-Create a production build
-
-```bash
-yarn build
-```
-
-Preview the production build
-
-```bash
-yarn start
-```
-
-## Resources
-
-- [Documentation](https://portal.thirdweb.com/typescript/v5)
-- [Templates](https://thirdweb.com/templates)
-- [YouTube](https://www.youtube.com/c/thirdweb)
-- [Blog](https://blog.thirdweb.com)
-
-## Need help?
-
-For help or feedback, please [visit our support site](https://thirdweb.com/support)
+    Solidity 0.8.x or higher
+    Ethereum wallet (e.g., MetaMask) for interacting with the contract
+    A test network or Ethereum mainnet to deploy and interact with the contract
